@@ -1,0 +1,239 @@
+/* ad-buddypress.css 
+Stilmallsändringar till BuddyPress & bbPress.
+*/
+
+/* Typograhy
+_________________________________________________________ */
+
+#bbpress-forums ul.bbp-lead-topic, 
+#bbpress-forums ul.bbp-topics, 
+#bbpress-forums ul.bbp-forums, 
+#bbpress-forums ul.bbp-replies, 
+#bbpress-forums ul.bbp-search-results,
+div.bbp-reply-content p,
+.bbp-forum-title,
+.bbp-topic-title {
+    font-size: 16px;
+}
+ 
+
+.bbp-forum-info,
+.bbp-forum-topic-count,
+.bbp-forum-reply-count,
+.bbp-forum-freshness,
+.bbp-topic-voice-count,
+.bbp-topic-reply-count,
+.bbp-topic-freshness,
+.bbp-reply-header,
+.bbp-reply-author,
+.bbp-reply-content,
+.favorite-toggle,
+.subscription-toggle,
+.bbp-header .bbp-topic-freshness {
+	font-size: 12px;
+	}
+.bbp-topic-freshness {
+	font-size: 11px;
+	}
+
+.bbp-form legend, .bbp-form fieldset legend {
+	font-family: 'Oswald', sans-serif;
+	}
+#bbpress-forums fieldset.bbp-form legend {
+	font-size: 2em;
+	padding: 0.5em 0.95em;
+	line-height: 1.3em;
+	}
+#bbpress-forums fieldset fieldset.bbp-form legend {
+	padding: 0;
+	}
+.bbp-forum-title,
+.bbp-topic-permalink {
+	font-weight: bold;
+	}
+/* HTML
+--------------------------------------------------------- */
+bbpress-forums div.bbp-topic-content ul, 
+#bbpress-forums div.bbp-reply-content ul,
+#bbpress-forums div.bbp-topic-content ol, 
+#bbpress-forums div.bbp-reply-content ol {
+margin: 0 15px 15px;
+padding: 1em;
+font-size: 16px;
+}
+bbpress-forums div.bbp-topic-content ul li, 
+#bbpress-forums div.bbp-reply-content ul li {
+	list-style-type: circle;
+}
+bbpress-forums div.bbp-topic-content ul li, 
+#bbpress-forums div.bbp-reply-content ul li,
+#bbpress-forums div.bbp-topic-content ol li, 
+#bbpress-forums div.bbp-reply-content ol li {
+margin: 0;
+}
+
+/* Layout
+--------------------------------------------------------- */
+ #bbpress-forums div.bbp-reply-header {
+	background-color: #fafafa;
+	}
+.bbPress .breadcrumb-list {
+	display: none;
+}
+.bbp-breadcrumb a {
+	color: #8d9094;
+	}
+.bbp-search-form,
+.activity h6,
+.forum-archive h6,
+.bp-user h6,
+.groups h6,
+.activity .post-data,
+.forum .post-data,
+.bp-user .post-data,
+.groups .post-data,
+.bbPress .post-data,
+.BuddyPress .post-data,
+.BuddyPress h6 {
+	display: none;
+	}
+#bbpress-forums li.bbp-header {
+    background: #eaeaea;
+	font-weight: normal;
+}
+#bbpress-forums li.bbp-footer {
+    display: none;
+}
+#bbpress-forums div.even,
+#bbpress-forums ul.even {
+	background-color: #f5f5f5;
+}
+
+#bbpress-forums div.odd,
+#bbpress-forums ul.odd {
+	background-color: #fafafa;
+}
+#bbpress-forums .reply {
+    margin: 0;
+	}
+
+span.bbp-topic-started-by img.avatar,
+span.bbp-topic-freshness-author img.avatar,
+.bbp-topic-revision-log-item img.avatar {
+    display:none;
+}
+
+div.bbp-template-notice.info, .bbp-pagination-count {
+    border: 1px solid rgb(206, 225, 239);
+    background-color: #fff;
+	display: none;
+}
+#post-234 div.bbp-template-notice.info,
+#post-234 p {
+    border: none;
+    background-color: #fafafa;
+	display: block;
+	color: #2f3133;
+	font-size: 14px;
+}
+
+#bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-topics, #bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results {
+border: none;
+}
+
+
+/* Media Print
+-------------------------------------------------------------- */
+@media print {
+
+    h1 {
+	    page-break-before: always;
+    }
+
+    h1,  h2,  h3,  h4,  h5,  h6 {
+	    page-break-after: avoid;
+    }
+
+    ul,  ol,  dl {
+	    page-break-before: avoid;
+    }
+}
+
+/*	Retina (HiDPI) Display
+    http://www.quirksmode.org/blog/archives/2013/06/devicepixelrati.html
+-------------------------------------------------------------- */
+@media 
+    only screen and (-moz-min-device-pixel-ratio:1.5), 
+    only screen and (-o-min-device-pixel-ratio:3/2), 
+    only screen and (-webkit-min-device-pixel-ratio:1.5), 
+    only screen and (min-device-pixel-ratio:1.5) {
+    
+}
+
+
+/* =Responsive (Mobile) Design
+-------------------------------------------------------------- */
+@media screen and (max-width: 980px) {
+
+	
+		
+    
+}
+
+@media screen and (max-width: 650px) {
+	#bbpress-forums div.bbp-reply-author a.bbp-author-name {
+    margin: 0px;
+    display: inline-block;
+	}
+	#bbpress-forums div.bbp-reply-author {
+    float: left;
+    text-align: left;
+	}
+	#bbpress-forums div.bbp-reply-author img.avatar {
+		display: none;
+		margin: 0;
+		height: 0;
+		width: 0;
+	}
+	
+}
+
+@media screen and (max-width: 480px) {
+	#bbpress-forums li.bbp-header div.bbp-reply-author,
+	#bbpress-forums li.bbp-footer div.bbp-reply-author {
+    display: none;
+	}
+	#bbpress-forums li.bbp-header .bbp-reply-content, #bbpress-forums li.bbp-footer .bbp-reply-content {
+    margin-left: 0;
+    padding: 0px;
+    text-align: center;
+	}
+	#bbpress-forums div.bbp-reply-content {
+    margin: 0 10px 10px;
+	padding: 0;
+	}
+	#bbpress-forums .reply {
+    margin: 0;
+	padding: 0;
+	}
+	#bbpress-forums div.bbp-reply-author {
+    float: none;
+	clear: both;
+    text-align: center;
+	width: 100%;
+	padding-top: 0;
+	}
+	
+	}	
+}
+
+@media screen and (max-width: 320px) {
+    
+
+}
+
+@media screen and (max-width: 240px) {
+    
+	
+	
+}
