@@ -45,7 +45,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 
 	<div id="featured" class="grid col-940" style="padding-bottom: 0;">
 	
-		<a href="/partiprogram/"><img src="/wp-content/themes/responsive/images-ad/home-slider-01.jpg" width="980" height="380" alt="Läs vårt partiprogram" /></a>
+		<a href="/partiprogram/"><img src="/wp-content/themes/ad-3/images-ad/home-slider-01.jpg" width="980" height="380" alt="Läs vårt partiprogram" /></a>
 	
 	</div><!-- end of #featured -->
                

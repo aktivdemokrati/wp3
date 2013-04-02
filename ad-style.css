@@ -56,7 +56,7 @@ background: #bbddfe;
 .col-940 {
 	width: 86%;
 }
-.home-page .col-940 {
+.home .col-940 {
 	width: 100%;
 }
 .bbPress .grid-right {
@@ -683,7 +683,7 @@ a.green:hover {
 
 /* Homepage tabs
 -------------------------------------------------------------- */
-.home-page .home-widgets .col-940 {
+.home .home-widgets .col-940 {
 	margin-top: 50px;
 	}
 #wp-tabs-1 {
@@ -693,13 +693,13 @@ a.green:hover {
 	width: 33%;
 	float: left;
 	}
-.home-page #widgets ul, 
-.home-page #widgets ol {
+.home #widgets ul, 
+.home #widgets ol {
     padding: 0;
 	border-radius: 0;
 	
 }
-.home-page div#wp-tabs-1 .ui-state-default a {
+.home div#wp-tabs-1 .ui-state-default a {
     padding: 5px 20px;
 	font: normal 2em 'Oswald', sans-serif;
 	border-radius: 0;
@@ -708,24 +708,24 @@ div#wp-tabs-1 h2 {
 	margin-bottom: .657em;
     margin-top: .857em;
 	}
-.home-page ul.ui-tabs-nav {
+.home ul.ui-tabs-nav {
 	background: none;
 	border-radius: none;
 	}
-.home-page .wpui-light .ui-corner-all {
+.home .wpui-light .ui-corner-all {
 	border-radius: 0;
 	border: none;	
 	}
-.home-page .wpui-light .ui-tabs-nav {
+.home .wpui-light .ui-tabs-nav {
 	border-radius: 0;
 	
 	}
-.home-page  .wpui-light ul.ui-tabs-nav li.ui-state-default {
+.home  .wpui-light ul.ui-tabs-nav li.ui-state-default {
 	border-radius: 0;
 	background: none;
 	background-color: #eee;
 }
-.home-page .wpui-light ul.ui-tabs-nav li.ui-state-active {
+.home .wpui-light ul.ui-tabs-nav li.ui-state-active {
 	background: #fff;
 	border-bottom: 0px;
 	border-radius: 0;
@@ -949,7 +949,7 @@ body.login div#login p#backtoblog a {}
 		background-color: #000;
 		width: 30%;
 		}
-	.home-page .home-widgets .col-940 {
+	.home .home-widgets .col-940 {
 	margin-top: 70px;
 	}
 	#wp-tabs-1 {

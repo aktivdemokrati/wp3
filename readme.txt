@@ -1,14 +1,22 @@
 -------------------------------------------------------
-    Thank you for downloading Responsive Theme!
+    Based on the Responsive Theme!
 -------------------------------------------------------
-This and any other Theme provided by ThemeID should
-be free of bugs, however do note that we're only humans
-and if you spot a bug do us a favor and report here
-http://cyberchimps.com/forum/free/responsive/
 
-If something goes wrong, or you need our assistance with anything
-just register and post your question(s).
+See http://themeid.com/responsive-theme/
 
+-------------------------------------------------------
+
+Additional plugins used by Aktiv Demokrati
+
+BAW Login/Logout menu
+Lightbox Plus ColorBox
+Widget CSS Classes
+WP UI - Tabs, accordions and more
+
+
+
+
+-------------------------------------------------------
 -------------------------------------------------------
     Responsive Features:
 -------------------------------------------------------
