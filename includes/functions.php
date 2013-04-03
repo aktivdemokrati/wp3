@@ -23,26 +23,6 @@ if ( !defined('ABSPATH')) exit;
  * Fire up the engines boys and girls let's start theme setup.
  */
  
- 
- // AD2013 Egen stil för login
- 
- function my_login_stylesheet() { ?>
-    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/ad-style.css'; ?>" type="text/css" media="all" />
-<?php }
-
-function my_login_logo_url() {
-    return get_bloginfo( 'url' );
-}
-add_filter( 'login_headerurl', 'my_login_logo_url' );
-
-function my_login_logo_url_title() {
-    return 'Your Site Name and Info';
-}
-add_filter( 'login_headertitle', 'my_login_logo_url_title' );
-
- // End AD2013 Egen stil för login
-
-add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 add_action('after_setup_theme', 'responsive_setup');
 
 if (!function_exists('responsive_setup')):

@@ -12,6 +12,7 @@ function ad_section()
   $locations = get_nav_menu_locations();
   $menu = wp_get_nav_menu_object( $locations[ 'primary' ] );
   $menu_items = wp_get_nav_menu_items( $menu->term_id );
+  if( ! $menu_items )return '';
 
   global $wp_query;
   $queried_object = $wp_query->get_queried_object();
