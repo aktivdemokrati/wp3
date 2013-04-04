@@ -28,3 +28,5 @@ require ( ADHOMESYS . '/includes/version.php' );
 // AD2013
 require ( ADHOMESYS . '/includes/ad-functions.php' );
 require ( ADHOMESYS . '/includes/sections.php' );
+
+ad_log("AD-3 loaded");

@@ -10,9 +10,9 @@ function ad_section()
     return $ad_section_post;
 
   $locations = get_nav_menu_locations();
+  if( ! isset($locations[ 'primary' ]) )return '';
   $menu = wp_get_nav_menu_object( $locations[ 'primary' ] );
   $menu_items = wp_get_nav_menu_items( $menu->term_id );
-  if( ! $menu_items )return '';
 
   global $wp_query;
   $queried_object = $wp_query->get_queried_object();
