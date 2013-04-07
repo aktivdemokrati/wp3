@@ -1,8 +1,8 @@
 <?php
+ad_log("header.php start");
 
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
-
 /**
  * Header Template
  *
@@ -147,3 +147,4 @@ if ( !defined('ABSPATH')) exit;
     <div id="wrapper" class="clearfix">
 		<?php responsive_wrapper_top(); // before wrapper content hook ?>
 		<?php responsive_in_wrapper(); // wrapper hook ?>
+<?php ad_log("header.php end"); ?>

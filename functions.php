@@ -28,5 +28,8 @@ require ( ADHOMESYS . '/includes/version.php' );
 // AD2013
 require ( ADHOMESYS . '/includes/ad-functions.php' );
 require ( ADHOMESYS . '/includes/sections.php' );
+require ( ADHOMESYS . '/includes/users.php');
+require ( ADHOMESYS . '/includes/facebook.php');
+require ( ADHOMESYS . '/facebook/facebook.php');
 
 ad_log("AD-3 loaded");

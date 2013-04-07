@@ -131,7 +131,7 @@ function ad_login( $login )
   if( $u = get_user_by('login',$login) )
     {
       global $wpdb;
-      update_user_meta($u->ID, 'ad_login_timestamp', $wpdb->prepare(time()));
+      update_user_meta($u->ID, 'ad_login_timestamp', time());
     }
 }
 add_action( 'wp_login','ad_login');
@@ -259,5 +259,204 @@ add_filter( 'json_api_controllers', 'ad_json_controllers' );
 
 function ad_json_gov_path($default_path) { return TEMPLATEPATH .'/include/json_gov.php'; }
 add_filter( 'json_api_gov_controller_path', 'ad_json_gov_path');
+
+////////////////////////////////////////////////////////////
+
+function ad_add_sociable($content)
+{
+  if( is_page() or is_single() )
+    return $content . ad_sociable_html();
+  
+  return $content;
+}
+add_filter( 'the_content', 'ad_add_sociable');
+
+////////////////////////////////////////////////////////////
+
+function ad_sociable_html()
+{
+  global $post; 
+  
+  /*
+  global $ad_trace;
+  $e = new Exception();
+  $ad_trace .= "\n----------\n\n".$e->getTraceAsString();
+  ad_log("ad_sociable_html ".$post->ID);
+  */
+
+  $imagepath = ADHOMEURL."/images-ad/16/";
+
+  $blogname 	= urlencode(get_bloginfo('name')." ".get_bloginfo('description'));
+
+  $excerpt_in = ad_get_excerpt($post->post_excerpt); // Avoid loop...
+  $excerpt	= urlencode($excerpt_in);
+  $excerpt	= str_replace('+','%20',$excerpt);
+
+  //  $permalink 	= urlencode(get_permalink($post->ID));
+  $permalink 	= get_permalink($post->ID);
+  $shortlink    = urlencode(wp_get_shortlink());
+  $title_in = $post->post_title;
+  if(!$title_in) $title_in = $blogname;
+  $title        = str_replace('+','%20',urlencode($title_in));
+  $html = '';
+
+  // Add facebook button
+  $html .= '<div class="fb-wrapper">';
+  $html .= '<fb:like href="'.$permalink.'" layout="standard" show_faces="true" width="450" action="recommend" colorscheme="light"></fb:like>';
+  $html .= '</div>';
+
+
+  // Start preparing the output
+  $html .= "\n<div class=\"sociable\">\n";
+  $html .= "<div class=\"sociable_tagline\">\n";
+  $html .= "Dela med dig:";
+  $html .= "\n</div>";
+
+  /**
+   * Start the list of links
+   */
+  $html .= "\n<ul>\n";
+
+  $display = Array(
+		   'Twitter' => Array
+		   (
+		    'favicon' => 'twitter.png',
+		    'url' => 'http://twitter.com/home?status=%40Aktiv_Demokrati%3A%20TITLE%20-%20SHORTLINK%20#demokrati',
+		    'supportsIframe' => false,
+		    ),
+		   
+		   'Digg' => Array
+		   (
+		    'favicon' => 'digg.png',
+		    'url' => 'http://digg.com/submit?phase=2&amp;url=PERMALINK&amp;title=TITLE&amp;bodytext=EXCERPT',
+		    ),
+
+		   'MySpace' => Array
+		   (
+		    'favicon' => 'myspace.png',
+		    'url' => 'http://www.myspace.com/Modules/PostTo/Pages/?u=PERMALINK&amp;t=TITLE',
+		    'supportsIframe' => false,
+		    ),
+
+		   'print' => Array
+		   (
+		    'favicon' => 'printer.png',
+		    'url' => '#',
+		    'description' => "Skriv ut sidan",
+		    'onClick' => "window.print();return false",
+		    ),
+
+		   'PDF' => Array
+		   (
+		    'favicon' => 'pdf.png',
+		    'url' => 'http://www.printfriendly.com/print?url=PERMALINK&amp;partner=sociable',
+		    ),
+
+		   'RSS' => Array
+		   (
+		    'favicon' => 'bg_feed.gif',
+		    'url' => get_post_comments_feed_link(),
+		    'supportsIframe' => false,
+		    'description' => 'Kommentarer till '.$post->post_title,
+		    'display' => comments_open($post->ID),
+		    ),
+		   );
+
+  foreach( $display as $sitename => $site)
+    {
+      if(isset($site['display']) and !$site['display']) continue;
+
+      $url = $site['url'];
+      $url = str_replace('TITLE', $title, $url);
+      $url = str_replace('BLOGNAME', $blogname, $url);
+      $url = str_replace('EXCERPT', $excerpt, $url);
+      $url = str_replace('PERMALINK', $permalink, $url);		
+      $url = str_replace('SHORTLINK', $shortlink, $url);		
+      $description = $sitename;
+      if(isset($site['description']))
+	$description = $site['description'];
+
+      /**
+       * Start building each list item. They're build up separately to
+       * allow filtering by other plugins.
+       */
+      $link = '<li>';
+      $link .= '<a ';
+      $link .= 'rel="nofollow" ';
+      if( isset($site['onClick']) )
+	{
+	  $link .= sprintf('onClick="%s" ', $site['onClick']);
+	}
+      $link .= " href=\"$url\" title=\"$description\">";			
+      
+      $imgsrc = $imagepath.$site['favicon'];
+      $link .= "<img src=\"".$imgsrc."\" title=\"$description\" alt=\"$description\"";
+      $link .= " class=\"sociable-hovers\"";
+      $link .= " />";
+      $link .= "</a></li>";
+		
+      /**
+       * Add the list item to the output HTML, but allow other plugins
+       * to filter the content first.  This is used for instance in
+       * the Google Analytics for WordPress plugin to track clicks on
+       * Sociable links.
+       */
+      $html .= "\t".apply_filters('sociable_link',$link)."\n";
+    }
+
+  $html .= "</ul>\n</div>\n";
+  
+  return $html;
+}
+
+///////////////////////////////////////////////////////////
+
+/*
+ * The default filter wp_trim_excerpt() will call the filter for
+ * 'the_content' if no excerpt exist. It then applys the filters for
+ * wp_trim_excerpt on the result. We don't want the added content
+ * given by the_content filters. Thus, we must add our own default
+ * excerpt here. And do it smarter!
+ */
+
+function ad_get_excerpt($content)
+{
+  if( $content != '' )
+    return $content;
+
+  global $post, $id; // Initialize $post if needed. (If called from header)
+  if( !$id ) setup_postdata($post);
+
+  $text = strip_tags(strip_shortcodes(get_the_content('')));
+  $text = trim(preg_replace('/\s+/',' ',$text));
+
+  //$len1 = strlen($text);
+  if( strlen($text) > 298 )
+    {
+      $text = substr( $text, 0, 295 );
+      $text = preg_replace('/(.*)\..*/', '$1.', $text) . ' …';
+    }
+  //$len2 = strlen($text);
+  //echo "<tt>($len1/$len2) $text</tt>";
+  //global $id, $post;
+  //$pid = $post->ID;
+  //ad_log("ad_get_excerpt $id,$pid ($len1/$len2)");
+
+  return $text;
+}
+ add_filter( 'get_the_excerpt', 'ad_get_excerpt',1); // run before wp_trim_excerpt
+
+///////////////////////////////////////////////////////////
+
+function ad_setup()
+{
+  ad_fb_init();
+}
+add_action( 'after_setup_theme', 'ad_setup');
+
+////////////////////////////////////////////////////////////
+
+// Avoid loading two pages per request
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
 ////////////////////////////////////////////////////////////

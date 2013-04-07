@@ -28,6 +28,7 @@ class JSON_API_GOV_Controller
     if(! gov_client_authorized() ) exit;
 
     $meta_true = $_GET['true'];
+    if(! $meta_true ) exit;
 
     global $wpdb;
     $users = $wpdb->get_results($wpdb->prepare("
@@ -67,6 +68,8 @@ function gov_client_authorized()
   echo '{"status":"denied"}';
   return 0;
 }
+
+ad_log("json_gov loaded");
 
 
 

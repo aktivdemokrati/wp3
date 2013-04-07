@@ -114,6 +114,7 @@ function ad_get_nav_menu_items($args)
     }
   return $section_items;
 }
+add_filter( 'wp_get_nav_menu_items', 'ad_get_nav_menu_items' );
 
 ////////////////////////////////////////////////////////////
 
