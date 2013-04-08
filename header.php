@@ -34,14 +34,36 @@ if ( !defined('ABSPATH')) exit;
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+<link href="https://plus.google.com/117631766948561738723/" rel="publisher" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://aktivdemokrati.se/favicon.ico" />
+<link rel="icon" type="image/png" href="<?php echo(ADHOMEURL) ?>/images-ad/favicon64.png"/>
+<link rel="apple-touch-icon" href="http://aktivdemokrati.se/apple-touch-icon.png">
+
 <?php wp_enqueue_style('responsive-style', get_stylesheet_uri(), false, '1.9.0');?>
 
-<?php wp_head(); ?>
+<?php wp_head();?>
+<script type="text/javascript" src="<?php echo(ADHOMEURL) ?>/js/jquery.ba-bbq.min.js"></script>
+<script type="text/javascript">window.ad_wp_logged_in="<?PHP echo is_user_logged_in();?>";</script>
+<script type="text/javascript" src="<?php echo(ADHOMEURL) ?>/js/ad.js?v=6"></script>
+<script type="text/javascript" src="<?php echo(ADHOMEURL) ?>/js/iframe_resize.js"></script>
 <?php 
 /* AD2013
 ** Lade till ad-style.css och länkar till BBPress och BuddyPress CSS där. För att kunna ändra på ett smidigt sätt.
 ** CSS-en ligger i temamappen och länkar till ad-bbpress.css och ad-buddypress.css*/ ?>
 <link rel="stylesheet" href="<?php echo home_url('/wp-content/themes/ad-3/ad-style.css'); ?>" type="text/css" media="screen" />
+<?php
+/* Google Analytics tracking code */
+?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20939045-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </head>
 
 <body <?php body_class(); ?>>
