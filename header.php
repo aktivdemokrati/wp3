@@ -75,7 +75,7 @@ if ( !defined('ABSPATH')) exit;
     <div id="header">
     
      <div class="top-icon-wrapper-responsive">
-    	<a href="#"><div class="dagens-rost-responsive">Dagens röst</div></a>    	
+    	<!--a href="#"><div class="dagens-rost-responsive">Dagens röst</div></a-->    	
         <a href="/manifesto/"><div class="ad-in-english-responsive">In english</div></a>
         <?php // AD2013 Visa vid 980 resolution
 			$user_ID = get_current_user_id();
@@ -133,7 +133,7 @@ if ( !defined('ABSPATH')) exit;
 				echo '<a href="'. wp_logout_url() .'"><div class="ad-logout-link"></div></a>';
 			} ?>
     </div>        
-        <a href="#"><div class="dagens-rost hide-980"></div></a>
+        <!-- a href="#"><div class="dagens-rost hide-980"></div></a -->
         
      
         
@@ -145,7 +145,7 @@ if ( !defined('ABSPATH')) exit;
 					'theme_location'  => 'header-menu')
 					); 
 				?>
-            <div id="search-in-menu" class="widget_search">	<form method="get" id="searchform" action="http://new.aktivdemokrati.se/">
+            <div id="search-in-menu" class="widget_search">	<form method="get" id="searchform" action="http://aktivdemokrati.se/">
                 <input type="text" class="field menu-search-field" name="s" id="s" placeholder="Sök här &hellip;" />
                 <input type="submit" class="submit menu-submit" name="submit" id="searchsubmit" value="Sök"  />
             </form>

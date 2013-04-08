@@ -1,11 +1,11 @@
 <?php
-/**
- */
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
 
 get_header(); ?>
-<div id="container">
-<div id="content" role="main">
-<?php
+<div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
+        
+	<?php
   global $wp;
   $category_slug = $wp->query_vars['catname'];
 //  $category_slug = $_GET['catname'];
@@ -25,23 +25,11 @@ query_posts(array( 'cat' => $category->cat_ID,
 		   'nopaging' => 0,
 		   'post_status' => 'publish',
 		   'caller_get_posts' => 1));
-
-if ( have_posts() )
-  the_post();
-?>
-
+ if (have_posts()) the_post(); ?>
+        
 <h1 class="page-title archive-title">
   Lista: <span><?php echo $category_name?></span>
 </h1>
-
-<div class="breadcrumbs">
-<?php
-if(function_exists('bcn_display'))
-{
-	bcn_display();
-}
-?>
-</div>
 
 <?php
 $category_description = category_description();
@@ -58,8 +46,8 @@ while ( have_posts() ) :
 <li><h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( 'echo=0' ); ?>"><?php the_title(); ?></a></h2></li>
 <?php endwhile; // End the loop. Whew. ?>
 </ol>
-</div><!-- #content -->
-</div><!-- #container -->
+      
+</div><!-- end of #content -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
