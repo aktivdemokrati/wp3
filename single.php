@@ -32,6 +32,9 @@ get_header(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>       
 				<?php responsive_entry_top(); ?>
 
+                 <?php if ( has_post_thumbnail( $post->ID ) )
+                 echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' ); ?>
+
                 <?php get_template_part( 'post-meta-page' ); ?>
                                 
                 <div class="post-entry">
