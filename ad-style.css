@@ -56,6 +56,9 @@ background: #bbddfe;
 .col-940 {
 	width: 86%;
 }
+#footer-wrapper .grid.col-940 {
+	width: 100%;
+	}
 .home .col-940 {
 	width: 100%;
 }
