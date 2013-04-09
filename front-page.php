@@ -45,7 +45,7 @@ and locate_template( get_post_meta( get_option( 'page_on_front' ), '_wp_page_tem
 
 	<div id="featured" class="grid col-940" style="padding-bottom: 0;">
 	
-		<a href="/partiprogram/"><img src="/wp-content/themes/ad-3/images-ad/home-slider-01.jpg" width="980" height="380" alt="Läs vårt partiprogram" /></a>
+		<a href="/senaste/partiprogram/"><img src="/wp-content/themes/ad-3/images-ad/home-slider-01.jpg" width="980" height="380" alt="Läs vårt partiprogram" /></a>
 	
 	</div><!-- end of #featured -->
                
