@@ -56,6 +56,9 @@ background: #bbddfe;
 .col-940 {
 	width: 86%;
 }
+#footer-wrapper .grid.col-940 {
+	width: 100%;
+	}
 .home .col-940 {
 	width: 100%;
 }
@@ -411,36 +414,40 @@ ul.menu > li:hover {
 #featured {
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
-	background-color: #fff;
 	border: 0;
 	border-radius: 0;
-	padding-bottom: 40px;
 	width: 100%;
 	-moz-box-shadow: 0 0 5px #8d8d8d;
 	-webkit-box-shadow: 0 0 5px #8d8d8d;
 	box-shadow: 0 0 5px #8d8d8d;
+	background: #fff;
+	height: auto;
 }
-
-#featured p {
-	font-size: 18px;
-	font-weight: 200;
-	line-height: 27px;
-	padding: 0 40px 0 40px;
+.featured-image-front {
+	float: left;
+	width: 63%;	
 	text-align: center;
+	
+	}
+.featured-copy {
+	float: left;
+	width: 33%;
+	text-align: left;
+	background-color: #e9ede0;
+	padding: 2%;
+	height: 90%;
+	}
+#featured h3 {
+	margin: 0.5em 0 0.875em 0;
+	text-transform: uppercase;
 }
-
-#featured-image {
-	margin: 40px 0 0 0;
+#featured p {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.4em;
+	padding: 0;
+	text-align: left;
 }
-
-#featured-image .fluid-width-video-wrapper {
-	margin-left: -20px;
-}
-
-.featured-image img {
-	margin-top: 44px;
-}
-
 /* =Content
 -------------------------------------------------------------- */
 
@@ -1048,6 +1055,18 @@ body.login div#login p#backtoblog a {}
 	#wp-tabs-1 {
 	margin-top: -89px;
 	}
+	#featured {
+		clear: both;
+		}
+	.featured-image-front {
+	float: none;
+	width: 100%;	
+	}
+	.featured-copy {
+	float: none;
+	width: 80%;
+	padding: 2% 10%;
+	}  
 		
     
 }
@@ -1094,6 +1113,9 @@ body.login div#login p#backtoblog a {}
 	width: 100%;
 	float: none;
 	margin: 0;
+	}
+	.featured-image-front img {
+		width: 96%;		
 	}
 }
 
