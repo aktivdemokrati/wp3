@@ -56,6 +56,9 @@ background: #bbddfe;
 .col-940 {
 	width: 86%;
 }
+#footer-wrapper .grid.col-940 {
+	width: 100%;
+	}
 .home .col-940 {
 	width: 100%;
 }
@@ -731,7 +734,7 @@ span.sociable_tagline:hover span {
 /* Loaders
 -------------------------------------------------------------- */
 
-#dim{ position:absolute; top:0; left:0; width:100%; z-index:100; background: url('images/bg/dim.png'); display:none; text-align:left; }
+#dim{ position:absolute; top:0; left:0; width:100%; z-index:100; background: url('images-ad/background/dim.png'); display:none; text-align:left; }
 #spinner-center{ position:absolute; width:128px; height:128px; z-index:200; top: 50%; left: 50%; margin-top: -64px; margin-left: -64px; display:none}
 
 #wpstats { display:none }
