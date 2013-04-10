@@ -16,7 +16,7 @@ function ad_upload_ext($mimes='')
   return $mimes;
 }
 
-add_filter( 'upload_mimes',"add_upload_ext" );
+add_filter( 'upload_mimes',"ad_upload_ext" );
 
 ////////////////////////////////////////////////////////////
 
