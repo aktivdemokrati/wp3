@@ -581,16 +581,18 @@ jQuery(document).ready(function ($) {
             }
             options += $(this).text() + '</option>';
           });
-
         // Append options into a select
         $select.append(options);
 
         // Select the active item
         if (!settings.header) {
-          $select
-            .find(':eq(' + $(l_namespace_i + ' li')
-            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
-            .attr('selected', true);
+	    var index_active = $(l_namespace_i + ' li').index($(l_namespace_i + ' li.' + settings.active));
+	    if( index_active > 0 )
+	    {
+		$select
+		    .find(':eq(' + index_active + ')')
+		    .attr('selected', true);
+	    }
         }
 
         // Change window location
@@ -792,9 +794,12 @@ jQuery(document).ready(function ($) {
 					var that = $(this),
 						li = $("<li>"),
 						child;
-					if (that.is(":selected")) {
-						sbSelector.text(that.text());
-						s = TRUE;
+				        //if (that.is(":selected")) {
+					if (that.is("[selected]")) {
+					    sbSelector.text(that.text());
+					    //sbSelector.text('Meny');
+					    //log('Selected is ' + that.text());
+					    s = TRUE;
 					}
 					if (i === olen - 1) {
 						li.addClass("last");
@@ -840,7 +845,11 @@ jQuery(document).ready(function ($) {
 			}
 			
 			if (!s) {
-				sbSelector.text(opts.first().text());
+			    var crumb = $('.breadcrumb-current').text().trim()
+				|| $('h1').text().trim()
+				|| 'Hem';
+			    sbSelector.text(crumb);
+			    //log( '"' + $('h1').text().trim() + '"' );
 			}
 
 			$.data(target, PROP_NAME, inst);

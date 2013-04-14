@@ -4,7 +4,8 @@ if ( !defined('ABSPATH')) exit;
 
 get_header(); ?>
 <div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
-        
+        <?php get_template_part( 'loop-header' ); ?>
+        <?php responsive_entry_before(); ?>
 	<?php
   global $wp;
   $category_slug = $wp->query_vars['catname'];
