@@ -327,7 +327,7 @@ msgid ""
 "<span class=\"%1$s\">Posted on </span>%2$s<span class=\"%3$s\"> by </span>"
 "%4$s"
 msgstr ""
-"<span class=\"%1$s\">Publicerad den </span>%2$s<span class=\"%3$s\"> av </"
+"<span class=\"%1$s\">Publicerad </span>%2$s<span class=\"%3$s\"> av </"
 "span>%4$s"
 
 #: includes/functions.php
