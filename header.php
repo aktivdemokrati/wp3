@@ -50,7 +50,7 @@ if ( !defined('ABSPATH')) exit;
 /* AD2013
 ** Lade till ad-style.css och länkar till BBPress och BuddyPress CSS där. För att kunna ändra på ett smidigt sätt.
 ** CSS-en ligger i temamappen och länkar till ad-bbpress.css och ad-buddypress.css*/ ?>
-<link rel="stylesheet" href="<?php echo home_url('/wp-content/themes/ad-3/ad-style.css'); ?>?v=3.1" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/ad-style.css'; ?>?v=3.1" type="text/css" media="screen" />
 <?php
 /* Google Analytics tracking code */
 ?>
