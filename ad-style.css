@@ -409,6 +409,31 @@ ul.menu > li:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#172a54, endColorstr=#2c539e);
 }
 
+
+/* =Siderbar submenu
+-------------------------------------------------------------- */
+
+#widgets .menu-widget > .menu-item {
+  display: none;
+}
+
+#widgets .menu-widget {
+  padding: 0px;
+}
+
+#widgets .menu-widget > .current-menu-item {
+  display: block;
+}
+
+#widgets .menu-widget > .current-menu-item > a {
+  font-size: 20px;
+}
+
+/*#widgets .menu-widget > .current-menu-item > .sub-menu {
+  padding: 0px;
+  margin: 0px;
+}*/
+
 /* =Featured Content (Index-sida)
 -------------------------------------------------------------- */
 #featured {
