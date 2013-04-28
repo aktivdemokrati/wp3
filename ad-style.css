@@ -421,11 +421,11 @@ ul.menu > li:hover {
   padding: 0px;
 }
 
-#widgets .menu-widget > .current-menu-item {
+#widgets .menu-widget > .current-menu-ancestor {
   display: block;
 }
 
-#widgets .menu-widget > .current-menu-item > a {
+#widgets .menu-widget > .current-menu-ancestor > a {
   font-size: 20px;
 }
 
