@@ -1146,6 +1146,31 @@ body.login div#login p#backtoblog a {}
 
 @media screen and (max-width: 480px) {
 	
+	#content h1 {
+	  font-size: 1.5em;
+	}
+	
+	#content h2 {
+	  font-size: 1.2em;
+  }
+  
+  #content h3 {
+	  font-size: 1.2em;
+  }
+  
+  #content p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+	
+	#container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  #content {
+    overflow-x: hidden;
+  }
 	
 }
 
@@ -1188,5 +1213,4 @@ body.login div#login p#backtoblog a {}
 		background-size: contain;
 		height: 8em;
 	}
-	
 }
