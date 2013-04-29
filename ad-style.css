@@ -419,26 +419,43 @@ ul.menu > li:hover {
 /* =Siderbar submenu
 -------------------------------------------------------------- */
 
-#widgets .menu-widget > .menu-item {
-  display: none;
-}
-
 #widgets .menu-widget {
   padding: 0px;
 }
 
-#widgets .menu-widget > .current-menu-ancestor {
-  display: block;
+#widgets .menu-widget .sub-menu .sub-menu .menu-item {
+  font-size: 16px;
 }
 
-#widgets .menu-widget > .current-menu-ancestor > a {
-  font-size: 20px;
-}
-
-/*#widgets .menu-widget > .current-menu-item > .sub-menu {
+#widgets .menu-widget .sub-menu .sub-menu {
   padding: 0px;
-  margin: 0px;
-}*/
+}
+
+#widgets .menu-widget .menu-item {
+  display: none;
+}
+
+#widgets .menu-widget a {
+  display: none;
+}
+
+#widgets .menu-widget .current-menu-ancestor {
+  display: list-item;
+  list-style: none;
+}
+
+#widgets .menu-widget .sub-menu .current_page_item, #widgets .menu-widget .sub-menu .current_page_ancestor {
+  display: list-item;
+  list-style: none;
+}
+
+#widgets .menu-widget .sub-menu .current_page_item .menu-item a, #widgets .menu-widget .sub-menu .current_page_ancestor .menu-item a {
+  display: inline;
+}
+
+#widgets .menu-widget .sub-menu .current_page_item .menu-item, #widgets .menu-widget .sub-menu .current_page_ancestor .menu-item {
+  display: list-item;
+}
 
 /* =Featured Content (Index-sida)
 -------------------------------------------------------------- */
