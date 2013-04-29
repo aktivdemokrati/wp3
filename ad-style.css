@@ -409,6 +409,12 @@ ul.menu > li:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#172a54, endColorstr=#2c539e);
 }
 
+/* Hide third level in the main menu */
+
+.menu .sub-menu .sub-menu {
+  display: none;
+}
+
 
 /* =Siderbar submenu
 -------------------------------------------------------------- */
