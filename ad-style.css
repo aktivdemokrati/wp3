@@ -423,6 +423,10 @@ ul.menu > li:hover {
   padding: 0px;
 }
 
+#widgets ul.menu-widget {
+    margin: 0;
+}
+
 #widgets .menu-widget .sub-menu .sub-menu .menu-item {
   font-size: 16px;
 }
@@ -452,6 +456,7 @@ ul.menu > li:hover {
     font-weight: normal;
     line-height: 1.2em;
     font-size: 1.875em; /* = 30px */
+/*    position: absolute;*/
 }
 
 #widgets .menu-widget > .current-menu-ancestor > ul > li > :only-child
@@ -1013,6 +1018,91 @@ body.login div#login p#nav {}
 body.login div#login p#nav a {}
 body.login div#login p#backtoblog {}
 body.login div#login p#backtoblog a {}
+
+
+/* Bli medlem */
+
+.do123
+{
+    border: thin solid gray;
+    background: #E9EDE0;
+    border-radius:1em;
+}
+
+.do123 .disabled
+{
+    /* Required for IE 5, 6, 7 */
+    /* ...or something to trigger hasLayout, like zoom: 1; */
+    width: 100%; 
+		
+    /* Theoretically for IE 8 & 9 (more valid) */	
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	
+    /* This works in IE 8 & 9 too */
+    /* ... but also 5, 6, 7 */
+    filter: alpha(opacity=50);
+	
+    /* Older than Firefox 0.9 */
+    -moz-opacity:0.5;
+	
+    /* Safari 1.x (pre WebKit!) */
+    -khtml-opacity: 0.5;
+    
+    /* Modern!
+       /* Firefox 0.9+, Safari 2?, Chrome any?
+       /* Opera 9+, IE 9+ */
+    opacity: 0.5;
+}
+
+.do123 p > span:first-child
+{
+    font-size: 5em;
+    font-family: 'Bitter',serif;
+    color: #BD2E2C;
+    font-style: italic;
+    margin-left: -0.3em;
+    margin-right: 0.3em;
+    text-shadow: 0 0 4px #100;
+}
+
+.do123 .login
+{
+    background: url("images-ad/graphic_elements/in-english-logga-inut-980.png") no-repeat scroll -2px 0 transparent;
+    color: #FAFAFA;
+    font: 0.9em 'Oswald',sans-serif;
+    height: 30px;
+    padding: 2px 0 0;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    text-transform: uppercase;
+    padding: 0 1em;
+    border: 2px solid white;
+    box-shadow: 0 1px 2px #111;
+}
+
+.do123 .coin
+{
+/*
+    background: yellow;
+    border-radius:1em;
+    padding: 0.3em 0.3em;
+    box-shadow: 0 0.2em 0.2em #000;
+*/
+    font-style: italic;
+}
+
+.do123 .done
+{
+    font-size: 5em;
+    font-family: 'Bitter',serif;
+    color: #0F0;
+    text-shadow: 0.02em 0.03em 0.06em #100;
+    position: absolute;
+    z-index: 1;
+}
+
 
 /* Media Print
 -------------------------------------------------------------- */
