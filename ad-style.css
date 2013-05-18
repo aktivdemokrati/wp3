@@ -14,6 +14,23 @@ Tema för Aktiv Demokrati
 /* =Globals
 -------------------------------------------------------------- */
 
+.col-660
+{
+    width: 70.2127659574468%;
+}
+
+.col-610
+{
+    width: 64.8936170212766%;
+}
+
+/*
+  40px = 4.2553191489362%
+  20px = 2.1276595744681%
+
+*/
+
+
 body {
 color: #2f3133;
 font-family: 'Open Sans', sans-serif;
@@ -38,8 +55,12 @@ background: #bbddfe;
 #content-blog, 
 #content-search, 
 #content-archive {
- 	padding: 20px 40px;
-	width: 634px;
+ 	padding: 20px 4.2553191489362%;
+/*	width: 634px;*/
+/*
+	width: 602px;
+	max-width: 634px;
+*/
 	padding-bottom: 60px;
 }
 #content, 

@@ -31,10 +31,10 @@ function responsive_get_content_classes() {
 	$layout = responsive_get_layout();
 	if ( in_array( $layout, array( 'default', 'content-sidebar-page' ) ) ) {
 		$content_classes[] = 'grid';
-		$content_classes[] = 'col-700'; // AD2013 Ändrade col-620 till col-700 
+		$content_classes[] = 'col-620'; // AD2013 Ändrade col-620 till col-700 
 	} else if ( 'sidebar-content-page' == $layout ) {
 		$content_classes[] = 'grid-right';
-		$content_classes[] = 'col-700'; // AD2013 Ändrade col-620 till col-700 
+		$content_classes[] = 'col-620'; // AD2013 Ändrade col-620 till col-700 
 		$content_classes[] = 'fit';
 	} else if ( 'content-sidebar-half-page' == $layout ) {
 		$content_classes[] = 'grid';
