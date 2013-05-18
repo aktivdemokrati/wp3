@@ -274,3 +274,9 @@ add_action( 'after_setup_theme', 'ad_setup');
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
 ////////////////////////////////////////////////////////////
+
+function ad_bottom_javascript()
+{
+  echo "<script>ad_bottom_javascript()</script>";			
+}
+add_action('responsive_wrapper_bottom','ad_bottom_javascript');

@@ -1,3 +1,13 @@
+function log(stuff)
+{
+    if( typeof console != 'undefined' )
+    {
+        console.log(stuff);
+    }
+}
+log("AD v1.3");
+     
+
 function update_button(response)
 {
     log('update_button');
@@ -93,15 +103,6 @@ function ad_fb_register_form_show_standard()
     $('#registerform p').show();
 }
 	 
-function log(stuff)
-{
-    if( typeof console != 'undefined' )
-    {
-        console.log(stuff);
-    }
-}
-     
-
 function fb_init()
 {
     $ = jQuery;
@@ -145,5 +146,20 @@ function fb_init()
 
 //    $ = jQuery;
 //    var userinfo = $('#user-info');
-    log("AD v1.3");
+}
+
+function ad_bottom_javascript()
+{
+    $ = jQuery;
+
+    log($('#widgets .menu-widget .sub-menu a:visible'));
+
+    if( $('#widgets .menu-widget .sub-menu a:visible').length )
+    {
+	$('.widget_nav_menu').
+	    css('display','none').
+	    css('visibility','visible').
+	    css('position','relative').
+	    show(800);
+    }
 }

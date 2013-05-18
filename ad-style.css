@@ -440,6 +440,14 @@ ul.menu > li:hover {
 /* =Siderbar submenu
 -------------------------------------------------------------- */
 
+html.js .widget_nav_menu
+{
+    visibility: hidden;
+    position: fixed;
+/*    display: none;
+*/
+}
+
 #widgets .menu-widget {
   padding: 0px;
 }
