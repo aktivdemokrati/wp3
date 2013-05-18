@@ -1,6 +1,4 @@
 <?php
-ad_log("header.php start");
-
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 /**
@@ -50,7 +48,7 @@ if ( !defined('ABSPATH')) exit;
 /* AD2013
 ** Lade till ad-style.css och länkar till BBPress och BuddyPress CSS där. För att kunna ändra på ett smidigt sätt.
 ** CSS-en ligger i temamappen och länkar till ad-bbpress.css och ad-buddypress.css*/ ?>
-<link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/ad-style.css'; ?>?v=3.2" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/ad-style.css'; ?>?v=3.3" type="text/css" media="screen" />
 <?php
 /* Google Analytics tracking code */
 ?>
@@ -169,4 +167,3 @@ if ( !defined('ABSPATH')) exit;
     <div id="wrapper" class="clearfix">
 		<?php responsive_wrapper_top(); // before wrapper content hook ?>
 		<?php responsive_in_wrapper(); // wrapper hook ?>
-<?php ad_log("header.php end"); ?>
