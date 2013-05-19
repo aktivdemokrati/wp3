@@ -556,7 +556,7 @@ function ad_fb_login_footer()
     }
     else if( $('#loginform').size() )
     {
-	$('#loginform').append('<p style="clear:both;margin-top:3em">eller</p><p><a id="fb-auth" class="fb_button fb_button_medium"><span class="fb_button_text">Logga in utan lösenord</span></a></p>');
+	$('#loginform').append('<p style="clear:both;margin-top:3em">eller</p><div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1">Logga in utan lösenord</div>');
 	$('#loginform').css('padding-bottom','2em');
 
 	function fb_init_local()

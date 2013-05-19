@@ -14,6 +14,11 @@ Tema för Aktiv Demokrati
 /* =Globals
 -------------------------------------------------------------- */
 
+#container
+{
+    position: relative;
+}
+
 .col-660
 {
     width: 70.2127659574468%;
@@ -827,16 +832,13 @@ span.sociable_tagline:hover span {
 
 /* =Facebook buttons style
 -------------------------------------------------------------- */
-#member-menu .fb_button_text
+.ad-fb-login
 {
-    padding: 1px 2px;
+    position: absolute;
+    top: 0;
+    right: 235px;
 }
 
-#fb-auth
-{
-    margin-right: 1em;
-    visibility: hidden;
-}
 
 
 /* Loaders

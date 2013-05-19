@@ -68,7 +68,29 @@ if ( !defined('ABSPATH')) exit;
                  
 <?php responsive_container(); // before container hook ?>
 <div id="container" class="hfeed">
-         
+
+<div class="hide-650 ad-fb-login">
+<?php
+/***************************************************
+ * Facebook button
+ */
+  if(  is_user_logged_in() ):
+global $current_user;
+$fb_uid = get_user_meta($current_user->ID, 'facebook_uid', true);
+if(! $fb_uid ):
+?>
+<div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1">Koppla till facebook</div>
+<?php
+endif;
+else:
+?>
+
+<div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1">Logga in utan lösenord</div>
+<?php
+endif;
+/****************************************************/
+?>
+</div>        
     <?php responsive_header(); // before header hook ?>
     <div id="header">
     
@@ -119,7 +141,6 @@ if ( !defined('ABSPATH')) exit;
     <?php endif; // header image was removed (again) ?>
     
     <?php $logout_url = '/du-har-loggat-ut/'; ?>
-    
     <div class="ad-login-in-english hide-980">
         <a href="/manifesto/"><div class="ad-in-english"></div></a>
         <?php 
@@ -131,11 +152,7 @@ if ( !defined('ABSPATH')) exit;
 				echo '<a href="'. wp_logout_url() .'"><div class="ad-logout-link"></div></a>';
 			} ?>
     </div>        
-        <!-- a href="#"><div class="dagens-rost hide-980"></div></a -->
-        
-     
-        
-    
+        <!-- a href="#"><div class="dagens-rost hide-980"></div></a -->    
     <?php get_sidebar('top'); ?>
 			    
 				<?php wp_nav_menu(array(
