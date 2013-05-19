@@ -79,13 +79,13 @@ global $current_user;
 $fb_uid = get_user_meta($current_user->ID, 'facebook_uid', true);
 if(! $fb_uid ):
 ?>
-<div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1">Koppla till facebook</div>
+<a id="fb-auth"><span class="pluginFaviconButtonBorder"><span class="pluginFaviconButtonText">Koppla till facebook</span></span></a>
 <?php
 endif;
 else:
 ?>
 
-<div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1">Logga in utan lösenord</div>
+<a id="fb-auth"><span class="pluginFaviconButtonBorder"><span class="pluginFaviconButtonText">Logga in utan lösenord</span></span></a>
 <?php
 endif;
 /****************************************************/
