@@ -52,9 +52,9 @@ $responsive_options = responsive_get_options();
          <?php get_sidebar('colophon'); ?>
                 
         <div class="grid col-300 copyright">
-            <?php esc_attr_e('&copy;', 'responsive'); ?> <?php _e(date('Y')); ?><a href="<?php echo home_url('/') ?>" title="<?php // echo esc_attr(get_bloginfo('name', 'display')); ?>Aktiv Demokrati">
-                <?php // bloginfo('name'); ?>Aktiv Demokrati
-            </a>
+            <?php // esc_attr_e('&copy;', 'responsive'); ?> <?php // _e(date('Y')); ?><a href="<?php echo home_url('/') ?>" title="<?php // echo esc_attr(get_bloginfo('name', 'display')); ?>Aktiv Demokrati">
+                <?php // bloginfo('name'); ?><!--Aktiv Demokrati
+            </a>-->
         </div><!-- end of .copyright -->
         
         <div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>
