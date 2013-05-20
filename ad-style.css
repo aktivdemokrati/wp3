@@ -177,7 +177,10 @@ h1 {
 	color: #bd2e2c;
 	font-weight: 700;
 }
-
+h1.post-title a {
+	font-family: 'Bitter', serif;	
+	font-weight: 700;
+	}
 h2 {
     font-size: 1.875em; /* = 30px */
     /* margin-bottom: .857em;
@@ -212,6 +215,9 @@ span.comments-link  {
 	}
 #widgets ul, #widgets ol {
     font-size: 0.9em;
+}
+.menu-huvud_meny-container .sub-menu ul {
+    list-style-type: none;
 }
 
 /* =Links
@@ -518,7 +524,7 @@ html.js .widget_nav_menu
 
 #widgets .menu-widget .current-menu-item > a
 {
-     text-shadow: 1px 2px 4px #3E9D18;
+    
 }
 
 
