@@ -115,7 +115,7 @@ width: 100%;
 }
 blockquote {
 padding: 1.5em 0 1.5em 0;
-width: 70%;
+max-width: 70%;
 margin: 0 20% 1.5em 10%;
 border-left: none;
 background: none;
@@ -445,12 +445,10 @@ ul.menu > li:hover {
 /* =Siderbar submenu
 -------------------------------------------------------------- */
 
-html.js .widget_nav_menu
+html.js #widgets .widget_nav_menu
 {
     visibility: hidden;
     position: fixed;
-/*    display: none;
-*/
 }
 
 #widgets .menu-widget {
@@ -1231,6 +1229,13 @@ body.login div#login p#backtoblog a {}
     font-size: small;
     font-style:italic;
     white-space: nowrap;
+}
+
+/* -------------------------- */
+
+.yarpp-related
+{
+    clear: both;
 }
 
 /* Media Print

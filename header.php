@@ -42,7 +42,7 @@ if ( !defined('ABSPATH')) exit;
 <?php wp_head();?>
 <script type="text/javascript" src="<?php echo(ADHOMEURL) ?>/js/jquery.ba-bbq.min.js"></script>
 <script type="text/javascript">window.ad_wp_logged_in="<?PHP echo is_user_logged_in();?>";</script>
-<script type="text/javascript" src="<?php echo(ADHOMEURL) ?>/js/ad.js?v=6"></script>
+<script type="text/javascript" src="<?php echo(ADHOMEURL) ?>/js/ad.js?v=7"></script>
 <script type="text/javascript" src="<?php echo(ADHOMEURL) ?>/js/iframe_resize.js"></script>
 <?php 
 /* AD2013
@@ -82,7 +82,7 @@ if(! $fb_uid ):
 <a id="fb-auth"><span class="pluginFaviconButtonBorder"><span class="pluginFaviconButtonText">Koppla till facebook</span></span></a>
 <?php
 endif;
-else:
+elseif( ad_fbuser() ):
 ?>
 
 <a id="fb-auth"><span class="pluginFaviconButtonBorder"><span class="pluginFaviconButtonText">Logga in utan lösenord</span></span></a>
