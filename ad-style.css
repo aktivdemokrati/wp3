@@ -135,7 +135,7 @@ margin: 0.875em 0 1.5em;
 	max-width: 100%;
 	padding: 25px 25px 0 25px;
 	border-top: 1px solid #fff;
-	background: #454545 url(images-ad/background/footer-background.png) repeat-x;
+	background: #454545 url(images/background/footer-background.png) repeat-x;
 	color: #fff;
 	font-size: 11px;
 	line-height: 1.5em;
@@ -249,19 +249,19 @@ a:active {
 	margin: 0 0 5px 0;	
 	}
 #footer li.ad-icon-rss {
-	background: url(images-ad/graphic_elements/bg-rss.gif) no-repeat 0 0;	
+	background: url(images/graphic_elements/bg-rss.gif) no-repeat 0 0;	
 	}
 #footer li.ad-icon-fb {
-	background: url(images-ad/graphic_elements/bg-fb.png) no-repeat 0 0;	
+	background: url(images/graphic_elements/bg-fb.png) no-repeat 0 0;	
 	}
 #footer li.ad-icon-yt {
-	background: url(images-ad/graphic_elements/bg-yt.png) no-repeat 0 0;	
+	background: url(images/graphic_elements/bg-yt.png) no-repeat 0 0;	
 	}
 #footer li.ad-icon-gplus {
-	background: url(images-ad/graphic_elements/bg-gplus.png) no-repeat 0 0;	
+	background: url(images/graphic_elements/bg-gplus.png) no-repeat 0 0;	
 	}
 #footer li.ad-icon-twitter {
-	background: url(images-ad/graphic_elements/bg-twitter.png) no-repeat 0 0;	
+	background: url(images/graphic_elements/bg-twitter.png) no-repeat 0 0;	
 	}
 
 /* =Widgets
@@ -679,7 +679,7 @@ a.green:hover {
 -------------------------------------------------------------- */
 .dagens-rost {
 	float: right;
-	background: url(images-ad/graphic_elements/dagens-rost.png) no-repeat;
+	background: url(images/graphic_elements/dagens-rost.png) no-repeat;
 	margin-right: 1%;
 	width: 202px;
 	height: 57px;
@@ -700,22 +700,22 @@ a.green:hover {
 	float: left;
 	width: 99px;
 	height: 57px;
-	background: url(images-ad/graphic_elements/in-english.png) no-repeat;
+	background: url(images/graphic_elements/in-english.png) no-repeat;
 	}
 .ad-login-link {
 	float: left;
 	width: 103px;
 	height: 57px;
-	background: url(images-ad/graphic_elements/logga-in.png) no-repeat;
+	background: url(images/graphic_elements/logga-in.png) no-repeat;
 	}
 .ad-logout-link {
 	float: left;
 	width: 103px;
 	height: 57px;
-	background: url(images-ad/graphic_elements/logga-ut.png) no-repeat;
+	background: url(images/graphic_elements/logga-ut.png) no-repeat;
 	}
 .rosta-har {
-	background: url(images-ad/graphic_elements/rosta-har.png)  center no-repeat;
+	background: url(images/graphic_elements/rosta-har.png)  center no-repeat;
 	width: 100%;
 	height: 170px;
 	margin: 0 auto;
@@ -850,7 +850,7 @@ span.sociable_tagline:hover span {
 
 
 #fb-auth .pluginFaviconButtonBorder {
-    background-image: url(images-ad/22/fb.png);
+    background-image: url(images/22/fb.png);
     background-position: 0px -1px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -881,7 +881,7 @@ span.sociable_tagline:hover span {
 /* Loaders
 -------------------------------------------------------------- */
 
-#dim{ position:absolute; top:0; left:0; width:100%; z-index:100; background: url('images-ad/background/dim.png'); display:none; text-align:left; }
+#dim{ position:absolute; top:0; left:0; width:100%; z-index:100; background: url('images/background/dim.png'); display:none; text-align:left; }
 #spinner-center{ position:absolute; width:128px; height:128px; z-index:200; top: 50%; left: 50%; margin-top: -64px; margin-left: -64px; display:none}
 
 #wpstats { display:none }
@@ -985,13 +985,13 @@ div#wp-tabs-1 h2 {
 	height: 184px;
 	}
 .home-tabs-megafon {
-	background: url(images-ad/graphic_elements/megafon.jpg) no-repeat center top;
+	background: url(images/graphic_elements/megafon.jpg) no-repeat center top;
 	}
 .home-tabs-klocka {
-	background: url(images-ad/graphic_elements/sa-rostar-vi.jpg) no-repeat center top;
+	background: url(images/graphic_elements/sa-rostar-vi.jpg) no-repeat center top;
 	}
 .home-tabs-clipboard {
-	background: url(images-ad/graphic_elements/flytande-demokrati-klocka.jpg) no-repeat center top;
+	background: url(images/graphic_elements/flytande-demokrati-klocka.jpg) no-repeat center top;
 	}
 h2.var-politik,
 h2.sa-rostar-vi,
@@ -1045,7 +1045,7 @@ body.login {
 	background: #bbddfe;
 	}
 .login h1 a {
-	background-image: url('images-ad/aktiv-demokrati-logo.png');
+	background-image: url('images/aktiv-demokrati-logo.png');
 	background-size: auto;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -1144,7 +1144,7 @@ body.login div#login p#backtoblog a {}
 
 .do123 .login
 {
-    background: url("images-ad/graphic_elements/in-english-logga-inut-980.png") no-repeat scroll -2px 0 transparent;
+    background: url("images/graphic_elements/in-english-logga-inut-980.png") no-repeat scroll -2px 0 transparent;
     color: #FAFAFA;
     font: 0.9em 'Oswald',sans-serif;
     height: 30px;
@@ -1292,17 +1292,17 @@ body.login div#login p#backtoblog a {}
 	text-shadow: 1px 1px #000;
 	}
 	.dagens-rost-responsive {
-		background: url(images-ad/graphic_elements/dagens-rost-980.png) no-repeat;		
+		background: url(images/graphic_elements/dagens-rost-980.png) no-repeat;		
 		width: 101px;
 		}
 	.ad-in-english-responsive {
-		background: url(images-ad/graphic_elements/in-english-logga-inut-980.png) no-repeat;
+		background: url(images/graphic_elements/in-english-logga-inut-980.png) no-repeat;
 		width: 78px;
 		padding-left: 4px;
 		}
 	.ad-login-link-responsive,
 	.ad-logout-link-responsive {
-		background: url(images-ad/graphic_elements/in-english-logga-inut-980.png) no-repeat -82px 0;
+		background: url(images/graphic_elements/in-english-logga-inut-980.png) no-repeat -82px 0;
 		width: 76px;
 		}
 

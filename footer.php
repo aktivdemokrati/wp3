@@ -72,6 +72,6 @@ $responsive_options = responsive_get_options();
 
 <?php wp_footer(); ?>
 <div id="dim"></div>
-<img id="spinner-center" alt="" src="<?php echo(ADHOMEURL) ?>/images-ad/loading-spinner.gif">
+<img id="spinner-center" alt="" src="<?php echo(ADHOMEURL) ?>/images/loading-spinner.gif">
 </body>
 </html>

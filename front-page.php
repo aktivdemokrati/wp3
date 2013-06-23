@@ -44,7 +44,7 @@ and locate_template( get_post_meta( get_option( 'page_on_front' ), '_wp_page_tem
 	?>
 
 	<div id="featured" class="grid col-940" style="padding-bottom: 0;">
-    	<a href="/senaste/partiprogram/"><div class="featured-image-front"><img src="/wp-content/themes/ad-3/images-ad/frontpage/valj-riksdagsplats.gif" /></div></a>
+    	<a href="/senaste/partiprogram/"><div class="featured-image-front"><img src="/wp-content/themes/ad-3/images/frontpage/valj-riksdagsplats.gif" /></div></a>
         <div class="featured-copy">
             <h3>Demokrati mellan valen</h3>
               <p> Aktiv Demokratis grundidé är att ge ansvaret och makten över det svenska samhället till medborgarna. Med dagens teknik blir möjligheterna för alla att påverka politiken allt större, och det är något Aktiv demokrati vill ge utrymme för att hända.</p>

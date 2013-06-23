@@ -34,7 +34,7 @@ if ( !defined('ABSPATH')) exit;
 
 <link href="https://plus.google.com/117631766948561738723/" rel="publisher" />
 <link rel="icon" type="image/vnd.microsoft.icon" href="http://aktivdemokrati.se/favicon.ico" />
-<link rel="icon" type="image/png" href="<?php echo(ADHOMEURL) ?>/images-ad/favicon64.png"/>
+<link rel="icon" type="image/png" href="<?php echo(ADHOMEURL) ?>/images/favicon64.png"/>
 <link rel="apple-touch-icon" href="http://aktivdemokrati.se/apple-touch-icon.png">
 
 <?php wp_enqueue_style('responsive-style', get_stylesheet_uri(), false, '1.9.0');?>
@@ -48,7 +48,7 @@ if ( !defined('ABSPATH')) exit;
 /* AD2013
 ** Lade till ad-style.css och länkar till BBPress och BuddyPress CSS där. För att kunna ändra på ett smidigt sätt.
 ** CSS-en ligger i temamappen och länkar till ad-bbpress.css och ad-buddypress.css*/ ?>
-<link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/ad-style.css'; ?>?v=3.3" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/ad-style.css'; ?>?v=3.4" type="text/css" media="screen" />
 <?php
 /* Google Analytics tracking code */
 ?>

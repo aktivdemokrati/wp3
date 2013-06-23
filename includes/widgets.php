@@ -472,7 +472,7 @@ function ad_sociable_html()
   ad_log("ad_sociable_html ".$post->ID);
   */
 
-  $imagepath = ADHOMEURL."/images-ad/16/";
+  $imagepath = ADHOMEURL."/images/16/";
 
   $blogname 	= urlencode(get_bloginfo('name')." ".get_bloginfo('description'));
 

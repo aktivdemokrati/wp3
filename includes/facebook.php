@@ -539,7 +539,7 @@ function ad_fb_login_footer()
 {
 ?>
 <div id="dim"></div>
-<img id="spinner-center" alt="" src="<?php echo(ADHOMEURL) ?>/images-ad/loading-spinner.gif">
+<img id="spinner-center" alt="" src="<?php echo(ADHOMEURL) ?>/images/loading-spinner.gif">
   <script>
   $ = jQuery;
 <?php
