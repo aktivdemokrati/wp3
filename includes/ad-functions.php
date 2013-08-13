@@ -280,3 +280,10 @@ function ad_bottom_javascript()
   echo "<script>ad_bottom_javascript()</script>";			
 }
 add_action('responsive_wrapper_bottom','ad_bottom_javascript');
+
+////////////////////////////////////////////////////////////
+
+add_image_size( 'preview', 500, 500, true );
+
+
+////////////////////////////////////////////////////////////

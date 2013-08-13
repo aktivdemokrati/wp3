@@ -131,7 +131,7 @@ function ad_fb_widget_header_meta()
 
       if( $thumb_id = get_post_thumbnail_id($post->ID) )
 	{
-	  $thumb = wp_get_attachment_image_src( $thumb_id, 'thumbnail' );
+	  $thumb = wp_get_attachment_image_src( $thumb_id, 'preview' );
 	  $ad_fb_settings['og']['image'] = $thumb[0];
 	}
       elseif( $images = get_children( $args ) )
@@ -140,7 +140,7 @@ function ad_fb_widget_header_meta()
 	  foreach( $images as $image )
 	    {
 	      $ad_fb_settings['og']['image'] =
-		array_shift(wp_get_attachment_image_src( $image->ID, 'thumbnail' ));
+		array_shift(wp_get_attachment_image_src( $image->ID, 'preview' ));
 	      break;
 	    }
 	}
