@@ -1493,3 +1493,11 @@ body.login div#login p#backtoblog a {}
 		height: 8em;
 	}
 }
+
+
+/* =Contact form
+-------------------------------------------------------------- */
+#contact-form-16 textarea 
+{
+    width: 300px;
+}
