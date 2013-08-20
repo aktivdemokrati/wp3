@@ -998,7 +998,7 @@ div#wp-tabs-1 h2 {
 	background-image: -ms-linear-gradient(top, #2c539e, #244386);
 	background-image: -o-linear-gradient(top, #2c539e, #244386);
 	background-image: linear-gradient(top, #2c539e, #244386);
-	clear: both;
+/*	clear: both;*/
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2c539e, endColorstr=#244386);
 	}
 .home div#wp-tabs-1 .last-li a {
@@ -1020,7 +1020,7 @@ div#wp-tabs-1 h2 {
 	background-image: none;
 	background-image: none;
 	background-image: none;
-	clear: both;
+/*	clear: both;*/
 	filter: none;
 	}
 .home div#wp-tabs-1 li.ui-state-active.last-li a {
@@ -1547,4 +1547,14 @@ body.login div#login p#backtoblog a {}
 #contact-form-16 textarea 
 {
     width: 300px;
+}
+
+
+/* =Tabs
+-------------------------------------------------------------- */
+
+.wp-tabs .ui-widget
+{
+    font-family: inherit;
+    font-size: inherit;
 }
