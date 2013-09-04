@@ -228,7 +228,8 @@ function ad_user_profile_update( $user_id )
 //      if( !$_POST[$key] ) continue;
       if( is_array($_POST[$key]) ) $_POST[$key] = implode(",", $_POST[$key]);
 //      error_log($key." = ".$_POST[$key]);
-      update_user_meta($user_id, $key, $wpdb->prepare($_POST[$key]));
+//      update_user_meta($user_id, $key, $wpdb->prepare($_POST[$key]));
+      update_user_meta($user_id, $key, $_POST[$key]);
     }
 }
 add_action( 'profile_update', 'ad_user_profile_update');
