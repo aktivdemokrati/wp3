@@ -201,7 +201,8 @@ function ad_user_profile_update( $user_id )
     {
 //      if( !$_POST[$key] ) continue;
       if( is_array($_POST[$key]) ) $_POST[$key] = implode(",", $_POST[$key]);
-      update_user_meta($user_id, $key, $wpdb->prepare($_POST[$key]));
+      //      update_user_meta($user_id, $key, $wpdb->prepare($_POST[$key]));
+      update_user_meta($user_id, $key, $_POST[$key]);
     }
 
   if( !current_user_can('edit_users') )

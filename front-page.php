@@ -47,7 +47,7 @@ and locate_template( get_post_meta( get_option( 'page_on_front' ), '_wp_page_tem
     	<a href="/senaste/partiprogram/"><div class="featured-image-front"><img src="/wp-content/themes/ad-3/images/frontpage/valj-riksdagsplats.gif" /></div></a>
         <div class="featured-copy">
             <h3>Demokrati mellan valen</h3>
-              <p> Aktiv Demokratis grundidé är att ge ansvaret och makten över det svenska samhället till medborgarna. Med dagens teknik blir möjligheterna för alla att påverka politiken allt större, och det är något Aktiv demokrati vill ge utrymme för att hända.</p>
+              <p> Aktiv Demokratis grundidé är att ge ansvaret och makten över det svenska samhället till medborgarna. Med dagens teknik blir möjligheterna för alla att påverka politiken allt större, och det är något Aktiv demokrati vill ge utrymme för.</p>
               <p>Många tycker att det är svårt att välja vilket parti de ska rösta på när det är val.</p>
               <p>Vår vardag är oftast mer komplex än ett partiprogram, och även om vi håller med om en del av ett partis ståndpunkter så håller vi sällan med om allt.</p>
                 

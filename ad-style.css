@@ -1558,3 +1558,10 @@ body.login div#login p#backtoblog a {}
     font-family: inherit;
     font-size: inherit;
 }
+
+.wp-tabs .ui-tabs .ui-tabs-nav li:hover, .wp-tabs .ui-tabs .ui-tabs-nav li a:hover {
+    background: inherit;
+    border-bottom: inherit;
+    color: inherit;
+    padding-bottom: inherit;
+}
