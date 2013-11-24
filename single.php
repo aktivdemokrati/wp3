@@ -38,6 +38,7 @@ get_header(); ?>
                  echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' ); ?>
 
                 <div class="post-entry">
+<?php if( preg_match('/^audio/', get_post_mime_type())) echo wp_audio_shortcode(wp_get_attachment_url()); ?>
                     <?php the_content(__('Read more &#8250;', 'responsive')); ?>
                     
                     <?php if ( get_the_author_meta('description') != '' ) : ?>
