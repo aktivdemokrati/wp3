@@ -988,29 +988,33 @@ div#wp-tabs-1 h2 {
 	background-color: #eee;
 }
 
-.home div#wp-tabs-1 .last-li {
+.home div#wp-tabs-1 #ui-id-2 {
 	border-radius: 0;
 	background: none;
-	background-color: #2c539e;
-	background-image: -moz-linear-gradient(center top , #2c539e, #244386);
-	background-image: -webkit-linear-gradient(top, #2c539e, #244386);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#2c539e), to(#244386));
-	background-image: -ms-linear-gradient(top, #2c539e, #244386);
-	background-image: -o-linear-gradient(top, #2c539e, #244386);
-	background-image: linear-gradient(top, #2c539e, #244386);
+	background-color: #ff3e3b;
+	background-image: -moz-linear-gradient(center top , #ff3e3b, #bd2e2b);
+	background-image: -webkit-linear-gradient(top, #ff3e3b, #bd2e2b);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ff3e3b), to(#bd2e2b));
+	background-image: -ms-linear-gradient(top, #ff3e3b, #bd2e2b);
+	background-image: -o-linear-gradient(top, #ff3e3b, #bd2e2b);
+	background-image: linear-gradient(top, #ff3e3b, #bd2e2b);
 /*	clear: both;*/
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2c539e, endColorstr=#244386);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff3e3b, endColorstr=#bd2e2b);
 	}
-.home div#wp-tabs-1 .last-li a {
+.home div#wp-tabs-1 a#ui-id-2 {
 	color: #fff;
-	text-shadow: 0 -1px 0 #115290;
+	/*text-shadow: 0 -1px 0 #115290; */
+	text-shadow: none;
+	border-bottom: 0px;
 	}
 .home .wpui-light ul.ui-tabs-nav li.ui-state-active {
 	background: #fafafa;
 	border-bottom: 0px;
 	border-radius: 0;
 }
-.home div#wp-tabs-1 li.ui-state-active.last-li {
+
+
+.home div#wp-tabs-1 li.ui-state-active #ui-id-2 {
 	border-radius: 0;
 	background: none;
 	background-color: #fafafa;
@@ -1020,13 +1024,17 @@ div#wp-tabs-1 h2 {
 	background-image: none;
 	background-image: none;
 	background-image: none;
-/*	clear: both;*/
 	filter: none;
-	}
-.home div#wp-tabs-1 li.ui-state-active.last-li a {
+	} 
+
+.home div#wp-tabs-1 li.ui-state-active a#ui-id-2 {
 	color: #444;
 	text-shadow: 0 -1px 0 #fff;
 	}
+	
+.wpui-light ul.ui-tabs-nav li {
+	border-bottom: none;
+}
 .home-tabs-megafon,
 .home-tabs-klocka,
 .home-tabs-clipboard {
