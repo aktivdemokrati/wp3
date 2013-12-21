@@ -60,6 +60,23 @@ function ad_log($row)
 
 ////////////////////////////////////////////////////////////
 
+function log_dump($var,$name)
+{
+  if(!$name) $name = 'var';
+  ob_start();
+  var_dump($var);
+  $output = ob_get_contents();
+  ob_end_clean();
+  $rows = explode("\n",$output);
+  ad_log("-- dump $name" );
+  foreach($rows as $row)
+    ad_log($row);
+  ad_log('--------------------');
+}
+
+
+////////////////////////////////////////////////////////////
+
 function log_backtrace()
 {
   ob_start();

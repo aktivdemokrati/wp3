@@ -94,8 +94,8 @@ function ad_fb_widget_header_meta()
   if( is_front_page() )
     {
       $ad_fb_settings['og']['type'] = 'non_profit';
-      $ad_fb_settings['og']['country_name'] = 'Sweden';
-      $ad_fb_settings['og']['email'] = 'kontakt@aktivdemokrati.se';
+#      $ad_fb_settings['og']['country_name'] = 'Sweden';
+#      $ad_fb_settings['og']['email'] = 'kontakt@aktivdemokrati.se';
       $ad_fb_settings['og']['title'] = 'Aktiv Demokrati';
     }	  
   elseif( is_home() )
@@ -149,13 +149,41 @@ function ad_fb_widget_header_meta()
 	{
 	  echo "<link rel=\"image_src\" href=\"".$ad_fb_settings['og']['image']."\" />\n";
 	}
+
+
+      ############ Also look at get_attached_media()
+      $mime = get_post_mime_type();
+#      ad_log("MIME: $mime ($ID)");
+#      $file = get_attached_file($post->ID);
+#      ad_log("FILE: $file");
+
+      if( preg_match('/^audio/', $mime ) )
+	{
+#	  $meta = wp_get_attachment_metadata($post->ID);
+#	  $url = wp_get_attachment_url($post->ID);
+#	  $mime_out = $mime;
+#	  if( $meta['fileformat'] == 'mp3' )
+#	    {
+#	      $mime_out = 'audio/mp3';
+#	    }
+#	  $ad_fb_settings['og']['type'] = 'music.song';
+#	  $ad_fb_settings['og']['audio'] = $url;
+#	  $ad_fb_settings['og']['audio:type'] = $mime_out;
+#	  $ad_fb_settings['og']['music:duration']  = $meta['length'];
+#	  $ad_fb_settings['og']['music:album'] = $meta['album'];
+#	  $ad_fb_settings['og']['music:release_date'] = $meta['year'];
+#	  $ad_fb_settings['og']['music:musician'] = $fbpageid;
+
+	  $ad_fb_settings['og']['description'] = $post->post_content;
+	}
+
     }
 
 
 
-  echo '<meta property="fb:admins" content="'.$fbid.'" />'."\n";
+#  echo '<meta property="fb:admins" content="'.$fbid.'" />'."\n";
   echo '<meta property="fb:app_id" content="'.$fbappid.'" />'."\n";
-  echo '<meta property="fb:page_id" content="'.$fbpageid.'" />'."\n";
+#  echo '<meta property="fb:page_id" content="'.$fbpageid.'" />'."\n";
 
   echo '<meta property="og:site_name" content="'.htmlspecialchars(get_bloginfo('name')).'" />'."\n";
 

@@ -270,6 +270,8 @@ a:active {
 	background: url(images/graphic_elements/bg-twitter.png) no-repeat 0 0;	
 	}
 
+dd { padding-left: 3em }
+
 /* =Widgets
 -------------------------------------------------------------- */
 .widget-wrapper {

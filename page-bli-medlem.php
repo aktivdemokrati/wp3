@@ -25,17 +25,17 @@ get_header(); ?>
 <div class="do123">
 <?php if( !is_user_logged_in() ){ ?>
 <p class="step"><a name="do1">1.</a> <a href="/wp-login.php?redirect_to=/bli-medlem/"><span class="login">Logga in</span></a></p>
-<p class="step disabled"><span>2.</span> Betala <span class="coin">1kr</span></p>
+<p class="step disabled"><span>2.</span> Betala <span class="coin">valfritt belopp</span></p>
 <p class="step disabled"><span>3.</span> Berätta om dig själv</p>
 <?php } else {  ?>
 <p class="step"><a name="do1">1.</a> <span class="done">✔</span><span class="login disabled">Logga in</span></p>
-<p class="step"><a name="do2">2.</a> <a href=#" onclick="$('.ad-pay').toggle();return false;">Betala <span class="coin">1kr</span></a></p>
-<div class="ad-pay info expand">via <a target="ad_payment" href="https://www.payson.se/SendMoney/?De=Medlemskap+1kr+och%2feller+donera+valfritt+belopp%21&Se=kontakt%40aktivdemokrati.se&Cost=0&ShippingAmount=0%2c00&Sp=1">payson</a>, <a href="#" onclick="$('.ad-plusgiro').toggle();return false;">plusgiro</a> <span class="ad-plusgiro expand important">1412890-4</span> eller <a href="#" onclick="$('.ad-posten').toggle();return false;">posten</a>.
+<p class="step"><a name="do2">2.</a> <a href=#" onclick="$('.ad-pay').toggle();return false;">Betala <span class="coin">valfritt belopp</span></a></p>
+<div class="ad-pay info expand">via <a target="ad_payment" href="https://www.payson.se/SendMoney/?De=Medlemskap+med+valfritt+belopp%21&Se=kontakt%40aktivdemokrati.se&Cost=0&ShippingAmount=0%2c00&Sp=1">payson</a>, <a href="#" onclick="$('.ad-plusgiro').toggle();return false;">plusgiro</a> <span class="ad-plusgiro expand important">1412890-4</span> eller <a href="#" onclick="$('.ad-posten').toggle();return false;">posten</a>.
 <span class="ad-posten expand"><br>
 Fredrik Liljegren<br>
 Hökås gård<br>
 511 92  HYSSNA</span>
-<span class="ad-plusgiro ad-posten expand"><br>Ange Användarnamn. Ge oss det stöd du kan. 350 kr motsvarar exempelvis mindre än 1 kr per dag.</span>
+<span class="ad-plusgiro ad-posten expand"><br>Ange Användarnamn. Ge oss det stöd du kan. Exempelvis 350 kr per år.</span>
 </div>
 <p class="step"><a name="do3">3.</a> <a href="#" onclick="$('.ad-tell').toggle();return false;">Berätta om dig själv</a></p>
 <?php if( $current_user->ad_personnummer ){ ?>
